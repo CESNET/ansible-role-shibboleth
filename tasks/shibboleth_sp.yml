@@ -29,6 +29,16 @@
   notify:
     - "restart shibd"
 
+- name: Copy logrotate configuration file
+  copy:
+    src: "files/etc/logrotate.d/shibboleth"
+    dest: "/etc/logrotate.d/shibboleth"
+    owner: root
+    group: root
+    mode: '0644'
+  tags:
+    - logrotate
+
 - name: Stop Shibboleth SP
   service:
     state: stopped
