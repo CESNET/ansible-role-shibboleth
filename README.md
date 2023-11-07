@@ -2,13 +2,13 @@
 Ansible galaxy role cesnet.shibboleth_sp that install and configure shibboleth SP
 
 ## Requirements
-
+_Note: at the moment there are no requirements that need to be stressed out_
 
 ## Role variables
 * shibboleth_hostname - Specify the hostname 
 * shibboleth_sp_entity_id - Specify the entityId of Service provider
 
-###### Followed options are only for the default attribute_map.xml template
+###### Following options are only for the default attribute_map.xml template
 * shibboleth_template_attribute_map_allow_urn_oid_attributes - Specify if default urn:oid attributes will be added to attribute map or not
 * shibboleth_template_attribute_map_allow_urn_mace_attributes - Specify if default urn:mace attributes will be added to attribute map or not
 * shibboleth_template_attribute_map_allow_schac_attributes - Specify if default schac attributes will be added to attribute map or not
@@ -18,7 +18,7 @@ Ansible galaxy role cesnet.shibboleth_sp that install and configure shibboleth S
   shibboleth_template_attribute_map_custom_attributes:
       - id: attributeId (REQUIRED)
         name: attributeName (REQUIRED)
-        comment: Commnent (OPTIONAL)
+        comment: Comment (OPTIONAL)
         decoder: (OPTIPNAL)
           type: Decoder_type (REQUIRED if decoder is filled)
   ```

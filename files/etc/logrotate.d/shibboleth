@@ -1,0 +1,10 @@
+/var/log/shibboleth/*.log {
+       weekly
+       rotate 10
+       copytruncate
+       delaycompress
+       compress
+       notifempty
+       missingok
+       su _shibd _shibd
+}
